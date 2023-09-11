@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+
+        }
+        p{
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My personal web page</h1>
+    <div class="container">
+        <img src="photo_2023-09-11_17-54-38.jpg" alt="" data-testid="slackProfilePicture">
+        <p data-testid="slackUserName">My Slack name</p>
+        <p data-testid="currentDayOfTheWeek">Current day of the week</p>
+        <p data-testid="currentDayOfTheWeek">Current UTC time in milliseconds</p>
+        <p data-testid="myTrack">My track</p>
+        <p data-testid="myTrack">My track</p>
+ 
+
+
+
+
+    <h2 class="time"></h2>
+    <h2 class="day"></h2>
+
+<script>
+    let date = new Date()
+    function showDate(){
+        switch(date.getDay()){
+            case 0:
+                day='Sunday';
+                break;
+            case 1:
+                day='Monday';
+                break;
+            case 2:
+                day='Tuesday';
+                break;
+            case 3:
+                day='Wednesday';
+                break;
+            case 4:
+                day='Thursday';
+                break;
+            case 5:
+                day='Friday';
+                break;
+            case 6:
+                day='Saturday';
+                break;
+            case 6:
+                day='Saturday';
+                break;
+           
+        }
+    }
+    let time = date.getTime()
+    let timeDiv = document.querySelector('.time')
+    let dayDiv = document.querySelector('.day')
+    timeDiv.innerHTML = time
+    dayDiv.innerHTML = day
+</script>
+    
+</body>
+</html>
